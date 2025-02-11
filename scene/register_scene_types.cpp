@@ -550,7 +550,7 @@ void register_scene_types() {
 	OS::get_singleton()->yield(); // may take time to init
 
 	GDREGISTER_ABSTRACT_CLASS(CollisionObject3D);
-	GDREGISTER_ABSTRACT_CLASS(PhysicsBody3D);
+	GDREGISTER_VIRTUAL_CLASS(PhysicsBody3D);
 	GDREGISTER_CLASS(StaticBody3D);
 	GDREGISTER_CLASS(AnimatableBody3D);
 	GDREGISTER_CLASS(RigidBody3D);
@@ -738,7 +738,7 @@ void register_scene_types() {
 	GDREGISTER_CLASS(MeshInstance2D);
 	GDREGISTER_CLASS(MultiMeshInstance2D);
 	GDREGISTER_ABSTRACT_CLASS(CollisionObject2D);
-	GDREGISTER_ABSTRACT_CLASS(PhysicsBody2D);
+	GDREGISTER_VIRTUAL_CLASS(PhysicsBody2D);
 	GDREGISTER_CLASS(StaticBody2D);
 	GDREGISTER_CLASS(AnimatableBody2D);
 	GDREGISTER_CLASS(RigidBody2D);

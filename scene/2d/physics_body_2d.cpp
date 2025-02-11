@@ -47,6 +47,13 @@ PhysicsBody2D::PhysicsBody2D(PhysicsServer2D::BodyMode p_mode) :
 	set_pickable(false);
 }
 
+PhysicsBody2D::PhysicsBody2D() :
+		CollisionObject2D(PhysicsServer2D::get_singleton()->body_create(), false) {
+	// Apply hack: All inherited classes implemented by the end user will have kinematic motion
+	set_body_mode(PhysicsServer2D::BODY_MODE_KINEMATIC);
+	set_pickable(false);
+}
+
 PhysicsBody2D::~PhysicsBody2D() {
 	if (motion_cache.is_valid()) {
 		motion_cache->owner = nullptr;

@@ -57,6 +57,12 @@ PhysicsBody3D::PhysicsBody3D(PhysicsServer3D::BodyMode p_mode) :
 	set_body_mode(p_mode);
 }
 
+PhysicsBody3D::PhysicsBody3D() :
+		CollisionObject3D(PhysicsServer3D::get_singleton()->body_create(), false) {
+	// Apply hack: All inherited classes implemented by the end user will have kinematic motion
+	set_body_mode(PhysicsServer3D::BODY_MODE_KINEMATIC);
+}
+
 PhysicsBody3D::~PhysicsBody3D() {
 	if (motion_cache.is_valid()) {
 		motion_cache->owner = nullptr;
