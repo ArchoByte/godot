@@ -512,6 +512,7 @@ public:
 	int get_collision_count() const;
 	real_t get_depth() const;
 	Vector3 get_position(int p_collision_index = 0) const;
+	real_t get_depth_with(int p_collision_index = 0) const;
 	Vector3 get_normal(int p_collision_index = 0) const;
 	real_t get_angle(int p_collision_index = 0, const Vector3 &p_up_direction = Vector3(0.0, 1.0, 0.0)) const;
 	Object *get_local_shape(int p_collision_index = 0) const;

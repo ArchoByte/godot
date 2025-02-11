@@ -93,6 +93,13 @@
 				Returns the point of collision in global coordinates given a collision index (the deepest collision by default).
 			</description>
 		</method>
+		<method name="get_depth_with" qualifiers="const">
+			<return type="float" />
+			<param index="0" name="collision_index" type="int" default="0" />
+			<description>
+				Returns the colliding body's length of overlap along the collision normal given a collision index (the deepest collision by default).
+			</description>
+		</method>
 		<method name="get_remainder" qualifiers="const">
 			<return type="Vector3" />
 			<description>
